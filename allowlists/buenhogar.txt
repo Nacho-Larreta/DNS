@@ -1,0 +1,37 @@
+# BuenHogar — DNS allowlist
+#
+# Subscribe this file in Pi-hole as an ALLOWLIST (not a blocklist).
+# In Pi-hole an allowlist entry wins over every blocklist, so this keeps
+# working no matter which blocklists are enabled now or added later.
+#
+# These are first-party observability endpoints for buenhogar.ai:
+# crash reporting and product analytics for our own application. They are
+# not ad networks and they carry no third-party advertising.
+#
+# Source of truth: the hosts actually referenced by the buenhogar_kotlin
+# repository, measured rather than assumed. See README.md.
+
+# ── Sentry — crash reporting and source-map upload ──────────────────────
+# sentry.io serves the API that `sentryUploadSourceBundleJava` (backend,
+# Dockerfile) and @sentry/nextjs (frontend) push source maps to at build
+# time. Blocking it fails the image build, not just the telemetry.
+sentry.io
+o1.ingest.sentry.io
+ingest.sentry.io
+ingest.us.sentry.io
+ingest.de.sentry.io
+browser.sentry-cdn.com
+js.sentry-cdn.com
+
+# ── PostHog — product analytics ─────────────────────────────────────────
+# The ingest host depends on BUENHOGAR_POSTHOG_REGION (US or EU), so both
+# regions are listed: the deployed value decides which one is used, and a
+# list that only covered one would break on a region switch.
+posthog.com
+app.posthog.com
+us.posthog.com
+eu.posthog.com
+us.i.posthog.com
+eu.i.posthog.com
+us-assets.i.posthog.com
+eu-assets.i.posthog.com
