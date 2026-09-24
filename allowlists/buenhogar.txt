@@ -22,6 +22,8 @@ ingest.us.sentry.io
 ingest.de.sentry.io
 browser.sentry-cdn.com
 js.sentry-cdn.com
+s1.sentry-cdn.com
+cdn.pendo.io
 
 # ── PostHog — product analytics ─────────────────────────────────────────
 # The ingest host depends on BUENHOGAR_POSTHOG_REGION (US or EU), so both
