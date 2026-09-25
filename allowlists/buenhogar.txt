@@ -37,3 +37,4 @@ us.i.posthog.com
 eu.i.posthog.com
 us-assets.i.posthog.com
 eu-assets.i.posthog.com
+internal-cf.posthog.com
