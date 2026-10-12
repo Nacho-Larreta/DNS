@@ -39,3 +39,11 @@ us-assets.i.posthog.com
 eu-assets.i.posthog.com
 internal-cf.posthog.com
 app-static-prod.posthog.com
+
+# ── PostHog — MCP server for the engineering agents ─────────────────────
+# Claude Code and Codex reach PostHog through its hosted MCP. The MCP
+# endpoint delegates auth to oauth.posthog.com (see its
+# /.well-known/oauth-protected-resource), so both must resolve or the
+# connection fails with ECONNREFUSED and re-authenticating cannot recover it.
+mcp.posthog.com
+oauth.posthog.com
