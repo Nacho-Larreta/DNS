@@ -39,6 +39,7 @@ us-assets.i.posthog.com
 eu-assets.i.posthog.com
 internal-cf.posthog.com
 app-static-prod.posthog.com
+mcp.posthog.com
 
 # ── PostHog — MCP server for the engineering agents ─────────────────────
 # Claude Code and Codex reach PostHog through its hosted MCP. The MCP
